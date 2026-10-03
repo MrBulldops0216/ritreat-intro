@@ -9,61 +9,80 @@
 <style>
 :root{color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:#f3f5f8;color:#243447;font-family:"Noto Sans TC","PingFang TC",sans-serif}
-.wrap{max-width:430px;margin:0 auto;padding:22px 16px 64px}
-.brand{background:#fff;border-radius:18px;padding:22px 18px 16px;text-align:center;box-shadow:0 1px 0 rgba(20,40,70,.04)}
-.kicker{margin:14px 0 0;color:#5d6f82;font-size:13px;letter-spacing:.04em}
-h1{margin:22px 0 6px;font-size:34px;line-height:1.1;color:#1b3a5f;font-weight:700}
-h2{margin:28px 0 12px;color:#2458a6;font-size:26px;font-weight:700}
-h2:after{content:"";display:block;width:28px;height:3px;background:#2458a6;border-radius:2px;margin-top:8px}
-.lead{margin:0 0 8px;font-size:16px;line-height:1.7}
-.en{font-family:Inter,"Segoe UI",sans-serif;color:#5c7084;font-size:14px;line-height:1.6}
-p{margin:0 0 10px;line-height:1.7}
-.card{background:#fff;border-radius:16px;padding:14px;margin:0 0 10px;box-shadow:0 8px 24px rgba(22,48,80,.05)}
-img{width:100%;height:auto;display:block;border-radius:12px;background:#e7eef5}
-.person{display:flex;gap:12px;align-items:center}
-.av{flex:none;width:44px;height:44px;border-radius:50%;background:#e7f0fa;color:#2458a6;display:grid;place-items:center;font-family:Inter,sans-serif;font-weight:700;font-size:14px}
-.person b{display:block;font-size:16px;color:#1c2b3a}
-.person span{display:block;margin-top:2px;color:#6b7c8d;font-size:13px;line-height:1.45;font-family:Inter,sans-serif}
-.mark{font-family:Inter,sans-serif;font-weight:700;font-size:28px;letter-spacing:.04em;color:#1b3a5f;margin:0}
-footer{margin-top:22px;color:#8b9aab;font-size:12px}
+body{margin:0;background:#f7f8fa;color:#243447;font-family:"Noto Sans TC","PingFang TC",sans-serif}
+.wrap{max-width:430px;margin:0 auto;padding:28px 22px 72px}
+.logo{width:min(100%,340px);height:auto;margin:0 auto 6px;display:block;background:transparent;border-radius:0}
+.kicker{margin:10px 0 0;text-align:center;color:#6b7c8d;font-size:13px;letter-spacing:.06em}
+h1{margin:28px 0 12px;font-size:36px;line-height:1.05;color:#1b3a5f;font-weight:700;letter-spacing:-.02em}
+h2{margin:40px 0 12px;color:#1b3a5f;font-size:15px;font-weight:600;letter-spacing:.12em}
+.lead{margin:0 0 10px;font-size:16px;line-height:1.75}
+.en{font-family:Inter,"Segoe UI",sans-serif;color:#5c7084;font-size:14px;line-height:1.65}
+p{margin:0 0 12px}
+.shots{margin:22px 0 0}
+.shots img{width:100%;height:auto;display:block;border-radius:18px;margin:0 0 14px;background:#e7eef5}
+.person{display:flex;gap:14px;align-items:center;padding:11px 0}
+.person + .person{border-top:1px solid #e6ebf1}
+.av{flex:none;width:48px;height:48px;border-radius:50%;object-fit:cover;background:#e7eef5}
+.ph{flex:none;width:48px;height:48px;border-radius:50%;background:#eef3f8;color:#2458a6;display:grid;place-items:center;font-family:Inter,sans-serif;font-weight:600;font-size:13px}
+.seal{flex:none;width:48px;height:48px;object-fit:contain;background:transparent;border-radius:0}
+.person b{display:block;font-size:15px;font-weight:600;color:#1c2b3a}
+.person span{display:block;margin-top:2px;color:#6b7c8d;font-size:13px;line-height:1.45;font-family:Inter,"Noto Sans TC",sans-serif}
 </style>
 </head>
 <body>
 <main class="wrap">
-<div class="brand">
-<p class="mark">DIV Lab</p>
+<img class="logo" id="logo" alt="DIV Lab">
 <p class="kicker">澳門工展會 · Macau Industrial Exhibition</p>
-</div>
 <h1>Ritreat</h1>
 <p class="lead">擴增實境眼鏡用空手做辦公，長時間雙手懸空容易帶來身體疲勞和心理負擔。Ritreat 把傳統投壺收成一段輕量、有文化根基的休息：任務告一段落時出現，引導人離開懸空姿勢，投出一箭，再回到工作，以緩解重複性勞損和心理疲勞。</p>
 <p class="en">Bare-hand work on AR glasses can bring physical fatigue and mental demand when both hands stay in mid-air. Ritreat turns traditional Touhu into a light, culturally grounded break: at the end of a task it guides you out of that posture, through one throw, and back to work, to ease repetitive strain and mental fatigue.</p>
-<div class="card"><img id="hero" alt="Ritreat：懸空工作之後起身投壺"></div>
-<div class="card"><img id="flow" alt="從懸空工作到投壺再回到工作"></div>
+<div class="shots">
+<img id="hero" alt="Ritreat：懸空工作之後起身投壺">
+<img id="flow" alt="從懸空工作到投壺再回到工作">
+</div>
 <h2>前身</h2>
 <p>前身是腕上生灵，更早的皮影原型，用 Rokid 眼鏡在辦公間隙放鬆手部、收集靈紋，並獲 Spatial Joy 2026 大灣區決賽 AR 賽道金獎，成員為劉智方、全子岳、鍾婷婷，指導教師任熹培。</p>
 <p class="en">Its predecessor is 腕上生灵, an earlier shadow-play prototype on Rokid glasses for relaxing the hands and collecting spirit patterns on an office break, which won gold in the AR track at Spatial Joy 2026, by Zhifang Liu, Ziyue Quan, and Tingting Zhong, advised by Xipei Ren.</p>
-<div class="card"><img id="wtitle" alt="腕上生灵標題"></div>
-<div class="card"><img id="wkey" alt="皮影世界主視覺"></div>
+<div class="shots">
+<img id="wtitle" alt="腕上生灵標題">
+<img id="wkey" alt="皮影世界主視覺">
+</div>
 <h2>作者</h2>
-<div class="card person"><div class="av">XR</div><div><b>Dr. Xipei Ren</b><span>DIV Lab, University of Macau</span></div></div>
-<div class="card person"><div class="av">BY</div><div><b>Dr. Bin Yu</b><span>Digital Life Research Group, Amsterdam University of Applied Sciences</span></div></div>
-<div class="card person"><div class="av">ZL</div><div><b>Zhifang Liu</b><span>University of Macau</span></div></div>
-<div class="card person"><div class="av">TZ</div><div><b>Tingting Zhong</b><span>University of Macau</span></div></div>
-<div class="card person"><div class="av">ZQ</div><div><b>Ziyue Quan</b><span>University of Macau</span></div></div>
-<div class="card person"><div class="av">SC</div><div><b>Sai Chen</b><span>University of Macau</span></div></div>
-<div class="card person"><div class="av">TR</div><div><b>Tianrui Rao</b><span>University of Macau</span></div></div>
-<div class="card person"><div class="av">RY</div><div><b>Ran Yan</b><span>School of Design and Arts, Beijing Institute of Technology</span></div></div>
+<div class="person"><img class="av" id="xr" alt=""><div><b>Dr. Xipei Ren</b><span>任熹培 · DIV Lab, University of Macau</span></div></div>
+<div class="person"><img class="av" id="by" alt=""><div><b>Dr. Bin Yu</b><span>Digital Life Research Group, Amsterdam University of Applied Sciences</span></div></div>
+<div class="person"><img class="av" id="zl" alt=""><div><b>Zhifang Liu</b><span>劉智方 · University of Macau</span></div></div>
+<div class="person"><img class="av" id="tz" alt=""><div><b>Tingting Zhong</b><span>鍾婷婷 · University of Macau</span></div></div>
+<div class="person"><img class="av" id="zq" alt=""><div><b>Ziyue Quan</b><span>全子岳 · University of Macau</span></div></div>
+<div class="person"><div class="ph">SC</div><div><b>Sai Chen</b><span>University of Macau</span></div></div>
+<div class="person"><div class="ph">TR</div><div><b>Tianrui Rao</b><span>University of Macau</span></div></div>
+<div class="person"><img class="av" id="ry" alt=""><div><b>Ran Yan</b><span>閆冉 · School of Design and Arts, Beijing Institute of Technology</span></div></div>
 <h2>機構</h2>
-<div class="card person"><div class="av">UM</div><div><b>University of Macau</b><span>設計學院 Faculty of Design</span></div></div>
-<div class="card person"><div class="av">DV</div><div><b>DIV Lab</b><span>Design Intelligence for Vitality · 智能與健康設計</span></div></div>
-<div class="card person"><div class="av">AU</div><div><b>Amsterdam University of Applied Sciences</b><span>Digital Life Research Group</span></div></div>
-<div class="card person"><div class="av">BI</div><div><b>Beijing Institute of Technology</b><span>設計與藝術學院 School of Design and Arts</span></div></div>
-<footer>展會介紹。腕上生靈的成員只屬於那個原型。</footer>
+<div class="person"><img class="seal" id="um" alt=""><div><b>澳門大學</b><span>University of Macau · 設計學院 Faculty of Design</span></div></div>
+<div class="person"><div><b>DIV Lab</b><span>Design Intelligence for Vitality · 智能與健康設計</span></div></div>
+<div class="person"><div><b>Amsterdam University of Applied Sciences</b><span>Digital Life Research Group</span></div></div>
+<div class="person"><div><b>北京理工大學</b><span>Beijing Institute of Technology · 設計與藝術學院</span></div></div>
 </main>
 <script>
-async function fill(id,name){try{let t="";for(let i=0;i<3;i++){const r=await fetch("media/img/"+name+"-"+i+".txt");if(!r.ok)return;t+=(await r.text()).replace(/\s/g,"");}document.getElementById(id).src="data:image/jpeg;base64,"+t}catch(e){}}
-[["hero","hero"],["flow","flow"],["wtitle","title"],["wkey","key"]].forEach(x=>fill(x[0],x[1]));
+async function fill(id,name){
+  try{
+    let t="";
+    for(let i=0;i<3;i++){
+      const r=await fetch("media/img/"+name+"-"+i+".txt");
+      if(!r.ok)return;
+      t+=(await r.text()).replace(/\s/g,"");
+    }
+    document.getElementById(id).src="data:image/jpeg;base64,"+t;
+  }catch(e){}
+}
+async function one(id,file){
+  try{
+    const r=await fetch(file);
+    if(!r.ok)return;
+    document.getElementById(id).src="data:image/jpeg;base64,"+(await r.text()).replace(/\s/g,"");
+  }catch(e){}
+}
+[["hero","hero"],["flow","flow"],["wtitle","title"],["wkey","key"]].forEach(function(x){fill(x[0],x[1]);});
+[["logo","media/face/div.txt"],["xr","media/face/xr.txt"],["by","media/face/by.txt"],["zl","media/face/zl.txt"],["tz","media/face/tz.txt"],["zq","media/face/zq.txt"],["ry","media/face/ry.txt"],["um","media/face/um.txt"]].forEach(function(x){one(x[0],x[1]);});
 </script>
 </body>
 </html>
