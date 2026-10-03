@@ -4,63 +4,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ritreat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    color: #12324a;
-    background: #f4f8fb;
-  }
-  main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 2.5rem 1.25rem 3rem;
-  }
-  p.kicker {
-    margin: 0 0 0.5rem;
-    color: #026abb;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-  }
-  h1 {
-    margin: 0 0 1rem;
-    font-size: 2.4rem;
-    line-height: 1.1;
-    color: #026abb;
-  }
-  h2 {
-    margin: 2rem 0 0.6rem;
-    font-size: 1.05rem;
-    color: #026abb;
-  }
-  p { margin: 0 0 0.9rem; line-height: 1.7; font-size: 1.05rem; }
-  .en { font-family: Inter, "Segoe UI", sans-serif; }
-  footer {
-    margin-top: 2.2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #d5e4f0;
-    color: #4d6b82;
-    font-size: 0.92rem;
-    line-height: 1.6;
-  }
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#eef3f8;color:#1b3348;font-family:"Noto Sans TC","PingFang TC",sans-serif}.wrap{max-width:760px;margin:0 auto;padding:28px 18px 72px}.kicker{margin:0;color:#026abb;font-size:13px;letter-spacing:.12em}h1{margin:10px 0 8px;font-size:52px;line-height:1;color:#026abb;font-weight:700}h2{margin:34px 0 8px;font-size:22px}h3{margin:0 0 8px;font-size:28px;color:#026abb}.lead{margin:0 0 8px;font-size:18px;line-height:1.75}.en{font-family:Inter,"Segoe UI",sans-serif;color:#3e5c74}p{margin:0 0 12px;line-height:1.75;font-size:16px}.card{background:#fff;border-radius:18px;padding:14px;margin:18px 0;box-shadow:0 10px 28px rgba(16,48,78,.06)}img,video{width:100%;height:auto;display:block;border-radius:12px;background:#e7eef5}figcaption,.cap{margin-top:8px;color:#5c7386;font-size:13px;line-height:1.55}.grid{display:grid;gap:10px;grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}.tile{background:#f4f8fb;border-radius:14px;padding:14px}.tile b{display:block;color:#026abb;margin-bottom:4px}.tile span{display:block;color:#5c7386;font-size:13px;font-family:Inter,sans-serif}.pills{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}.pill{background:#e7f3fb;color:#026abb;border-radius:999px;padding:6px 10px;font-size:13px}.org{color:#4d6b82;font-size:14px;line-height:1.7}footer.note{margin-top:28px;color:#7b90a1;font-size:12px}@media(max-width:640px){h1{font-size:42px}.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
 </style>
 </head>
 <body>
-<main>
-  <p class="kicker">澳門工展會 · 澳門大學設計學院</p>
-  <h1>Ritreat</h1>
-  <p>將傳統投壺帶入擴增實境辦公，緩解重複性勞損與心理疲勞。</p>
-  <p class="en">Bringing Touhu into AR office work, to ease repetitive strain and mental fatigue.</p>
-  <h2>項目簡介</h2>
-  <p>Ritreat 是一款具文化真實度的體感遊戲。它把傳統投壺放進配戴擴增實境眼鏡的辦公工作：持續的雙手懸空操作之後，遊戲在任務間隙出現，引導人改變姿勢、拿起箭矢瞄準並投出，再回到工作。</p>
-  <p class="en">Ritreat is a culturally authentic exergame. It adapts Touhu, a traditional Chinese throwing game, for office work with AR glasses. After sustained two-handed mid-air interaction, the game appears at a task boundary, guides a change of posture, and supports the return to work.</p>
-  <footer>
-    澳門大學 設計學院<br>
-    智能與健康設計課題組<br>
-    <span class="en">Faculty of Design, University of Macau<br>Lab of Design Intelligence for Vitality</span>
-  </footer>
+<main class="wrap">
+<p class="kicker">澳門工展會 · 澳門大學設計學院</p>
+<h1>Ritreat</h1>
+<p class="lead">將傳統投壺帶入擴增實境辦公，緩解重複性勞損與心理疲勞。</p>
+<p class="lead en">Bringing Touhu into AR office work, to ease repetitive strain and mental fatigue.</p>
+<div class="card"><img id="hero" alt="Ritreat：懸空辦公、起身投壺、回到工作"><p class="cap">持續的雙手懸空工作之後，投壺在任務間隙出現。人改變姿勢、投出箭矢，再回到工作。</p></div>
+<h2>項目簡介</h2>
+<p>Ritreat 是一款有文化根底的體感遊戲。擴增實境眼鏡讓人用空手辦公，但雙手一直懸在空中，身體容易累，精神也更費。它把傳統投壺收成一段很短的休息：壺和箭出現在任務之間，人站起來、拿起箭、投出去，然後回到原來的工作。</p>
+<p class="en">Ritreat is a culturally grounded exergame for office work with AR glasses. After sustained two-handed mid-air input, a short Touhu break appears at the task boundary. The person changes posture, picks up an arrow, throws it, and returns to work.</p>
+<h2>一次微休息怎麼發生</h2>
+<div class="card"><img id="flow" alt="從懸空工作到起身投壺，再回到工作"></div>
+<div class="grid">
+<div class="tile"><b>1 懸空工作</b>雙手在空中打字和操作。<span>Mid-air work</span></div>
+<div class="tile"><b>2 壺和箭出現</b>任務告一段落時，投壺的物件進入視線。<span>The vessel and arrow appear</span></div>
+<div class="tile"><b>3 起身投出</b>人離開懸空姿勢，瞄準並投擲。<span>Stand, aim, and throw</span></div>
+<div class="tile"><b>4 回到工作</b>投完之後，畫面回到原來的任務。<span>Return to the task</span></div>
+</div>
+<div class="card"><img id="study" alt="實驗中的懸空打字、拾箭、投壺和疲勞評估"><p class="cap">實驗裡的四個畫面：懸空打字、拾起箭矢、投向壺，以及在眼鏡裡查看疲勞程度。</p></div>
+<h2>研究裡看到的</h2>
+<div class="grid">
+<div class="tile"><b>五位物理治療師</b>先看過動作設計，並據此做了調整。<span>Five physiotherapists reviewed the movement</span></div>
+<div class="tile"><b>二十四人對照</b>同一個人分別經歷連續工作、自然休息和 Ritreat。<span>24 people, three conditions</span></div>
+<div class="tile"><b>立刻減輕疲勞感</b>相對一直工作，Ritreat 減輕了當下的主觀身體疲勞。<span>Less perceived fatigue than continuous work</span></div>
+<div class="tile"><b>情緒更好一些</b>情緒效價比連續工作和自然休息都更好。<span>Better affective valence than both</span></div>
+</div>
+<h2>前身原型</h2>
+<h3>腕上生灵</h3>
+<p>《腕上生灵》是一款基於 Rokid AR 眼鏡的手部放鬆與靈紋收集遊戲。團隊把辦公間隙的短暫休息，轉化為可完成、可收集的皮影文化體驗，讓健康習慣與非遺意象在輕量交互中自然相遇。</p>
+<div class="pills"><span class="pill">Spatial Joy 2026 大灣區決賽</span><span class="pill">AR 賽道金獎</span></div>
+<p>2026 年 9 月 12 日，這個原型在「全球高校 AR &amp; AI 創新挑戰賽」大灣區決賽獲得 AR 賽道金獎，也是全場 AR 賽道唯一的金獎。</p>
+<p>成員：劉智方、全子岳、鍾婷婷（澳門大學設計學院視覺傳達）。指導教師：任熹培。</p>
+<p>腕上生靈是先做出來的皮影原型。Ritreat 沿同一條辦公間隙的思路，收到投壺。</p>
+<p class="en">The earlier prototype is a Rokid AR break for hand relaxation and collecting spirit patterns, built around shadow play. Ritreat continues that idea of a short cultural break, and lands on Touhu.</p>
+<div class="grid">
+<figure class="card wide"><img id="wtitle" alt="腕上生灵標題畫面"><figcaption>標題畫面。路演封面的定位是 AR 手部放鬆與靈紋收集，沒有另外的英文作品名。</figcaption></figure>
+<figure class="card"><img id="woffice" alt="辦公間隙的手部放鬆"><figcaption>辦公間隙裡的手部放鬆。</figcaption></figure>
+<figure class="card"><img id="wdesk" alt="桌面上的皮影戲台"><figcaption>桌面上的皮影戲台。</figcaption></figure>
+<figure class="card wide"><img id="wkey" alt="皮影世界主視覺"><figcaption>皮影世界的主視覺。</figcaption></figure>
+<figure class="card"><img id="wgesture" alt="雙手配合的手勢"><figcaption>雙手或多段動作，和靈獸配合。</figcaption></figure>
+<figure class="card"><img id="wpatterns" alt="可收集的靈紋"><figcaption>可收集的靈紋。</figcaption></figure>
+</div>
+<h2>演示</h2>
+<div class="card"><video id="demo" controls playsinline preload="none"></video><p class="cap" id="video-note">路演裡的演示，大約一分二十四秒。正在載入。</p></div>
+<h2>作者</h2>
+<div class="grid">
+<div class="tile"><b>Dr. Xipei Ren</b>DIV Lab, University of Macau<span>澳門大學</span></div>
+<div class="tile"><b>Dr. Bin Yu</b>Digital Life Research Group, Amsterdam University of Applied Sciences<span>阿姆斯特丹應用科學大學</span></div>
+<div class="tile"><b>Zhifang Liu</b>University of Macau, Macao SAR<span>澳門大學</span></div>
+<div class="tile"><b>Tingting Zhong</b>University of Macau, Macao SAR<span>澳門大學</span></div>
+<div class="tile"><b>Ziyue Quan</b>University of Macau<span>澳門大學</span></div>
+<div class="tile"><b>Sai Chen</b>University of Macau<span>澳門大學</span></div>
+<div class="tile"><b>Tianrui Rao</b>University of Macau, Macao SAR<span>澳門大學</span></div>
+<div class="tile"><b>Ran Yan</b>School of Design and Arts, Beijing Institute of Technology<span>北京理工大學</span></div>
+</div>
+<h2>機構</h2>
+<p class="org">澳門大學 設計學院<br>智能與健康設計課題組<br><span class="en">Faculty of Design, University of Macau<br>Lab of Design Intelligence for Vitality</span></p>
+<footer class="note">展會介紹頁。腕上生靈的成員只屬於那個原型。</footer>
 </main>
+<script>
+async function fill(id,path){try{const t=(await(await fetch(path)).text()).replace(/\s/g,"");document.getElementById(id).src="data:image/jpeg;base64,"+t}catch(e){}}
+[["hero","media/img/hero.b64"],["flow","media/img/flow.b64"],["study","media/img/study.b64"],["wtitle","media/img/title.b64"],["woffice","media/img/office.b64"],["wdesk","media/img/desk.b64"],["wkey","media/img/key.b64"],["wgesture","media/img/gesture.b64"],["wpatterns","media/img/patterns.b64"]].forEach(x=>fill(x[0],x[1]));
+async function join(dir,n){let out="";for(let i=0;i<n;i++){const name=String(i).padStart(2,"0")+".txt";const res=await fetch(dir+name);if(!res.ok)throw new Error(name);out+=(await res.text()).trim()}return Uint8Array.from(atob(out),c=>c.charCodeAt(0))}
+join("media/v/",24).then(bin=>{document.getElementById("demo").src=URL.createObjectURL(new Blob([bin],{type:"video/mp4"}));document.getElementById("video-note").textContent="路演裡的演示，大約一分二十四秒。"}).catch(()=>{document.getElementById("video-note").textContent="演示視頻還沒載入成功。"});
+</script>
 </body>
 </html>
