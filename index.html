@@ -71,12 +71,12 @@ p{margin:0 0 12px}
 async function fill(id,name){
   try{
     let t="";
-    for(let i=0;i<3;i++){
+    for(let i=0;i<24;i++){
       const r=await fetch("media/img/"+name+"-"+i+".txt");
-      if(!r.ok)return;
+      if(!r.ok)break;
       t+=(await r.text()).replace(/\s/g,"");
     }
-    document.getElementById(id).src="data:image/jpeg;base64,"+t;
+    if(t)document.getElementById(id).src="data:image/jpeg;base64,"+t;
   }catch(e){}
 }
 async function face(id){
