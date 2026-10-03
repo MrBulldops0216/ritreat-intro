@@ -85,8 +85,8 @@ footer{margin-top:22px;color:#8b9aab;font-size:12px}
 <footer>展會介紹。腕上生靈的成員只屬於那個原型。</footer>
 </main>
 <script>
-async function fill(id,path){try{const t=(await(await fetch(path)).text()).replace(/\s/g,"");document.getElementById(id).src="data:image/jpeg;base64,"+t}catch(e){}}
-[["hero","media/img/hero.b64"],["flow","media/img/flow.b64"],["wtitle","media/img/title.b64"],["wkey","media/img/key.b64"]].forEach(x=>fill(x[0],x[1]));
+async function fill(id,name){try{let t="";for(let i=0;i<3;i++){const r=await fetch("media/img/"+name+"-"+i+".txt");if(!r.ok)return;t+=(await r.text()).replace(/\s/g,"");}document.getElementById(id).src="data:image/jpeg;base64,"+t}catch(e){}}
+[["hero","hero"],["flow","flow"],["wtitle","title"],["wkey","key"]].forEach(x=>fill(x[0],x[1]));
 </script>
 </body>
 </html>
