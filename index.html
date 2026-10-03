@@ -11,7 +11,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:#f7f8fa;color:#243447;font-family:"Noto Sans TC","PingFang TC",sans-serif}
 .wrap{max-width:430px;margin:0 auto;padding:28px 22px 72px}
-.logo{width:min(100%,340px);height:auto;margin:0 auto 6px;display:block;background:transparent;border-radius:0}
+.logo{width:min(100%,340px);height:auto;margin:0 auto 6px;display:block;background:transparent;border-radius:0;filter:brightness(0)}
 .kicker{margin:10px 0 0;text-align:center;color:#6b7c8d;font-size:13px;letter-spacing:.06em}
 h1{margin:28px 0 12px;font-size:36px;line-height:1.05;color:#1b3a5f;font-weight:700;letter-spacing:-.02em}
 h2{margin:40px 0 12px;color:#1b3a5f;font-size:15px;font-weight:600;letter-spacing:.12em}
@@ -31,7 +31,7 @@ p{margin:0 0 12px}
 </head>
 <body>
 <main class="wrap">
-<img class="logo" id="logo" alt="DIV Lab">
+<img class="logo" src="https://divlabdesign.com/pictures/divlogo.svg" alt="DIV Lab">
 <p class="kicker">澳門工展會 · Macau Industrial Exhibition</p>
 <h1>Ritreat</h1>
 <p class="lead">擴增實境眼鏡用空手做辦公，長時間雙手懸空容易帶來身體疲勞和心理負擔。Ritreat 把傳統投壺收成一段輕量、有文化根基的休息：任務告一段落時出現，引導人離開懸空姿勢，投出一箭，再回到工作，以緩解重複性勞損和心理疲勞。</p>
@@ -48,16 +48,16 @@ p{margin:0 0 12px}
 <img id="wkey" alt="皮影世界主視覺">
 </div>
 <h2>作者</h2>
-<div class="person"><img class="av" id="xr" alt=""><div><b>Dr. Xipei Ren</b><span>任熹培 · DIV Lab, University of Macau</span></div></div>
-<div class="person"><img class="av" id="by" alt=""><div><b>Dr. Bin Yu</b><span>Digital Life Research Group, Amsterdam University of Applied Sciences</span></div></div>
+<div class="person"><img class="av" src="https://divlabdesign.com/pictures/xpr.jpg" alt=""><div><b>Dr. Xipei Ren</b><span>任熹培 · DIV Lab, University of Macau</span></div></div>
+<div class="person"><img class="av" src="https://cms.web.hva.nl/sites/default/files/styles/1_1_725x725_focal_point_jpg/public/imported/2025-01/bin-yu.jpg" alt=""><div><b>Dr. Bin Yu</b><span>Digital Life Research Group, Amsterdam University of Applied Sciences</span></div></div>
 <div class="person"><img class="av" id="zl" alt=""><div><b>Zhifang Liu</b><span>劉智方 · University of Macau</span></div></div>
 <div class="person"><img class="av" id="tz" alt=""><div><b>Tingting Zhong</b><span>鍾婷婷 · University of Macau</span></div></div>
 <div class="person"><img class="av" id="zq" alt=""><div><b>Ziyue Quan</b><span>全子岳 · University of Macau</span></div></div>
 <div class="person"><div class="ph">SC</div><div><b>Sai Chen</b><span>University of Macau</span></div></div>
 <div class="person"><div class="ph">TR</div><div><b>Tianrui Rao</b><span>University of Macau</span></div></div>
-<div class="person"><img class="av" id="ry" alt=""><div><b>Ran Yan</b><span>閆冉 · School of Design and Arts, Beijing Institute of Technology</span></div></div>
+<div class="person"><img class="av" src="https://divlabdesign.com/pictures/yr.jpg" alt=""><div><b>Ran Yan</b><span>閎冉 · School of Design and Arts, Beijing Institute of Technology</span></div></div>
 <h2>機構</h2>
-<div class="person"><img class="seal" id="um" alt=""><div><b>澳門大學</b><span>University of Macau · 設計學院 Faculty of Design</span></div></div>
+<div class="person"><img class="seal" src="https://upload.wikimedia.org/wikipedia/commons/6/69/University_of_Macau_logo.svg" alt=""><div><b>澳門大學</b><span>University of Macau · 設計學院 Faculty of Design</span></div></div>
 <div class="person"><div><b>DIV Lab</b><span>Design Intelligence for Vitality · 智能與健康設計</span></div></div>
 <div class="person"><div><b>Amsterdam University of Applied Sciences</b><span>Digital Life Research Group</span></div></div>
 <div class="person"><div><b>北京理工大學</b><span>Beijing Institute of Technology · 設計與藝術學院</span></div></div>
@@ -74,15 +74,15 @@ async function fill(id,name){
     document.getElementById(id).src="data:image/jpeg;base64,"+t;
   }catch(e){}
 }
-async function one(id,file){
+async function face(id){
   try{
-    const r=await fetch(file);
+    const r=await fetch("media/face/"+id+".txt");
     if(!r.ok)return;
     document.getElementById(id).src="data:image/jpeg;base64,"+(await r.text()).replace(/\s/g,"");
   }catch(e){}
 }
 [["hero","hero"],["flow","flow"],["wtitle","title"],["wkey","key"]].forEach(function(x){fill(x[0],x[1]);});
-[["logo","media/face/div.txt"],["xr","media/face/xr.txt"],["by","media/face/by.txt"],["zl","media/face/zl.txt"],["tz","media/face/tz.txt"],["zq","media/face/zq.txt"],["ry","media/face/ry.txt"],["um","media/face/um.txt"]].forEach(function(x){one(x[0],x[1]);});
+["zl","tz","zq"].forEach(face);
 </script>
 </body>
 </html>
