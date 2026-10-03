@@ -77,12 +77,12 @@ async function fill(id,name){
 async function face(id){
   try{
     let t="";
-    for(let i=0;i<2;i++){
+    for(let i=0;i<8;i++){
       const r=await fetch("media/face/"+id+"-"+i+".txt");
-      if(!r.ok)return;
+      if(!r.ok)break;
       t+=(await r.text()).replace(/\s/g,"");
     }
-    document.getElementById(id).src="data:image/jpeg;base64,"+t;
+    if(t)document.getElementById(id).src="data:image/jpeg;base64,"+t;
   }catch(e){}
 }
 [["hero","hero"],["flow","flow"],["wtitle","title"],["wkey","key"]].forEach(function(x){fill(x[0],x[1]);});
